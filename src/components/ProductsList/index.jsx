@@ -6,29 +6,18 @@ import './styles.scss';
 import Card from '../Card';
 
 function ProductsList({ products }) {
+
+  const productTest = {
+    id: '01',
+    thumbnail: camiseta,
+    title: 'Camiseta Manga Curta de Corrida',
+    price: 'R$ 19,90'
+  };
+
   return (
 		<ul className='products-list'>
-			<li className='list-item'>
-				<div className='card-header'>
-					<span className='header-title'>O2 STORE</span>
-					<IoMdHeartEmpty size={30} color={'#ff3576'} />
-				</div>
-				<img src={camiseta} alt='camiseta corrida' />
-				<div className='separator' />
-				<strong>Camiseta Manga Curta de Corrida</strong>
-				<span>
-					De <span className='product-old-price'>R$49,90</span>
-				</span>{' '}
-        <div className="container">
-          <img className="tag-icon" src={ tagIcon } alt="tag icon"/>
-          <span className='product-price'>R$ 19,90</span>
-        </div>
-				<button type='button'>
-					<div>
-						<span>COMPRAR</span>
-					</div>
-				</button>
-			</li>
+      <Card product={ productTest} />
+
 			{products.map((product) => (
 				<Card key={product.id} product={product} />
 			))}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { IoMdHeartEmpty } from 'react-icons/io';
 import tagIcon from '../../images/tagIcon.svg';
+import './styles.scss';
 
 function Card({ product }) {
   return (
@@ -13,6 +14,9 @@ function Card({ product }) {
 				<img src={product.thumbnail} alt={product.title} />
 				<div className='separator' />
 				<strong>{product.title}</strong>
+				<span>
+					De <span className='product-old-price'>R$49,90</span>
+				</span>{' '}
 				<div className='container'>
 					<img className='tag-icon' src={tagIcon} alt='tag icon' />
 					<span className='product-price'>{product.price}</span>
