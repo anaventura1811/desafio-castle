@@ -1,13 +1,16 @@
 .title {
   align-items: center;
+  box-shadow: 1px solid var(--gray);
   justify-content: space-between;
   display: flex;
   height: 8rem;
-  background: var(--pink);
+  background: inherit;
 }
 
 .title a {
-  color: var(--white);
+  align-items: center;
+  color: var(--pink);
+  display: flex;
   font-family: Montserrat, sans-serif;
   font-size: 3rem;
   text-decoration: none;
@@ -22,6 +25,10 @@
 
 div strong {
   display: block;
+}
+
+div span {
+  font-size: 12px;
 }
 
 .title a:hover {

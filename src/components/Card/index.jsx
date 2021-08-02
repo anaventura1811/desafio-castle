@@ -14,11 +14,6 @@ function Card({ product }) {
     style: 'currency',
     currency: 'BRL',
   }).format(original_price);
-  
-  const installmentsFormatted = new Intl.NumberFormat('pt-BR', {
-		style: 'currency',
-		currency: 'BRL',
-	}).format(product.installments.amount);
 
   return (
 		<div>

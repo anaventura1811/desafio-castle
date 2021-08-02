@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import Footer from '../components/Footer';
 import Header from '../components/Header';
 import ProductsList from '../components/ProductsList';
 import { handleFetchProducts } from '../services/fetch';
+// import wavesDecoration from '../images/waves.svg';
 
 function Home() {
   const [products, setProducts] = useState([]);
@@ -18,6 +20,7 @@ function Home() {
     <div>
       <Header />
       <ProductsList products={ products } />
+      <Footer />
     </div>
   )
 }

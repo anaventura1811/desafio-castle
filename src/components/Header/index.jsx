@@ -2,8 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { MdShoppingBasket } from 'react-icons/md';
 import './styles.scss';
+import { useCart } from '../../hooks/useCart';
 
 function Header() {
+  const { cart } = useCart();
+  const cartSize = cart.length;
+
   return (
     <header className="title">
       <Link to="/">
@@ -12,9 +16,11 @@ function Header() {
       <Link to="/cart">
         <div>
           <strong>Meu carrinho</strong>
-          <span></span>
+          <span>
+            { cartSize === 1 ? `${cartSize} item` : `${cartSize} itens` }
+          </span>
         </div>
-        <MdShoppingBasket size={ 36 } color={ "#fff"} />
+        <MdShoppingBasket size={ 36 } color={ "#ff3576"} />
       </Link>
     </header>
   )
