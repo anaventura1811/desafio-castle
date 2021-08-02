@@ -4,6 +4,7 @@ import './styles.scss';
 import Card from '../Card';
 
 function ProductsList({ products }) {
+ 
 
   const productTest = {
     id: '01',

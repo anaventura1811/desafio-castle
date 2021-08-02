@@ -27,6 +27,39 @@ function CartContextProvider({ children }) {
     }
   }, [cart, cartPreviousValue]);
 
+  const addProduct = async (productId, productEl) => {
+		try {
+			const updatedCart = [...cart]; // para não alterar o array original
+			const productExists = updatedCart.find((product) => product.id === productId);
+			const stock = productEl.available_quantity;
+			const currentAmount = productExists ? productExists.amount : 0; // quantidade do produto no carrinho;
+
+			const amount = currentAmount + 1; // quantidade desejada
+
+			if (amount > stock) {
+				toast.error('Quantidade solicitada fora de estoque');
+				return;
+			}
+
+			if (productExists) {
+				productExists.amount = amount; // atualiza automaticamente o updated cart, atualiza quantidade do produto
+			} else {
+		   // se for novo produto, atualiza
+				const newProduct = {
+					...productEl,
+					amount: 1, // primeira vez que tá sendo adicionado ao carrinho
+				};
+
+				updatedCart.push(newProduct);
+			}
+
+			setCart(updatedCart); // pra perpetuar as alterações no estado do carrinho
+			
+		} catch {
+			toast.error('Erro na adição do produto');
+		}
+	};
+
   const removeProductFromCart = async (productId) => {
     try {
       const updatedCart = [...cart];
@@ -70,6 +103,7 @@ function CartContextProvider({ children }) {
 
   const contextValue = {
     cart,
+    addProduct,
     removeProductFromCart,
     updateProductAmount
   };

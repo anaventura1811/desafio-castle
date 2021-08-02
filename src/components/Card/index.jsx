@@ -3,9 +3,11 @@ import { IoMdHeartEmpty } from 'react-icons/io';
 import tagIcon from '../../images/tag.svg';
 import { format } from '../../services/formattingService';
 import './styles.scss';
+import { useCart } from '../../hooks/useCart';
 
 function Card({ product }) {
   const { price, original_price } = product;
+  const { addProduct } = useCart();
 
   const formattedPrice = format(price);
   const originalPriceFormatted = format(original_price);
@@ -41,7 +43,10 @@ function Card({ product }) {
               <span>{ format(product.installments.amount)}</span>
             </div>
             ) : ('')}
-				<button type='button'>
+				<button
+          type='button'
+          onClick={ () => addProduct(product.id, product )}
+        >
 					<div>
 						<span>COMPRAR</span>
 					</div>

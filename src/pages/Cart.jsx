@@ -1,15 +1,15 @@
 import React from 'react';
 import Header from '../components/Header';
-import { useCart } from '../hooks/useCart';
-import { format } from '../services/formattingService';
+// import { useCart } from '../hooks/useCart';
+// import { format } from '../services/formattingService';
 
 function Cart() {
-  const { cart, updateProductAmount, removeProduct } = useCart();
+  // const { cart, updateProductAmount, removeProduct } = useCart();
 
-  const cartFormatted = cart.map((product) => ({
-    ...product,
-    subTotal: format(product.price * product.amount)
-  }));
+  // const cartFormatted = cart.map((product) => ({
+  //   ...product,
+  //   subTotal: format(product.price * product.amount)
+  // }));
 
   // const total = cart.reduce((sumTotal, product) => {
   //   return sumTotal + product.price * product.amount

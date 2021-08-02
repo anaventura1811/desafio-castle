@@ -3,10 +3,10 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 import ProductsList from '../components/ProductsList';
 import { handleFetchProducts } from '../services/fetch';
-// import wavesDecoration from '../images/waves.svg';
 
 function Home() {
   const [products, setProducts] = useState([]);
+
   useEffect(() => {
     const fetchingProducts = async () => {
       const data = await handleFetchProducts('camiseta');
