@@ -1,4 +1,5 @@
 import React, { createContext, useRef, useState, useEffect } from 'react';
+import { toast } from 'react-toastify';
 
 export const CartContext = createContext({});
 
@@ -26,17 +27,57 @@ function CartContextProvider({ children }) {
     }
   }, [cart, cartPreviousValue]);
 
-  const addProductToCart = async (productId) => {
+  const removeProductFromCart = async (productId) => {
     try {
       const updatedCart = [...cart];
+      const productIndex = updatedCart.findIndex((product) => product.id === productId);
+      if (productIndex) {
+        updatedCart.filter((product) => product.id !== productId);
+        setCart(updatedCart);
+      } else {
+        throw Error();
+      }
+    } catch {
+
+    }
+  };
+
+  const updateProductAmount = async ({ productId, productEl, amount }) => {
+    try {
+      if (amount <= 0) {
+        return;
+      }
+
+      const stock = productEl.available_quantity;
+      if (amount > stock) {
+        toast.error('Quantidade solicitada fora de estoque');
+        return;
+      }
+
+      const updatedCart = [...cart];
+      const productExists = updatedCart.find((product) => product.id === productId);
+
+      if (productExists) {
+        productExists.amount = amount;
+        setCart(updatedCart);
+      } else {
+        throw Error();
+      }
+    } catch {
+      toast.error('Erro na alteração da quantidade do produto');
     }
   }
 
+  const contextValue = {
+    cart,
+    removeProductFromCart,
+    updateProductAmount
+  };
 
   return (
-    <div>
-      
-    </div>
+    <CartContext.Provider value={ contextValue }>
+      { children }
+    </CartContext.Provider>
   )
 }
 
