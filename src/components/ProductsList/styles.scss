@@ -1,6 +1,6 @@
 .products-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
   list-style: none;
 }
@@ -11,8 +11,6 @@
   background: #fff;
   border-radius: 4px;
   padding: 20px;
-
-  
 }
 
 li img {
@@ -43,4 +41,15 @@ li span {
 .separator {
 	border-bottom: 1px solid #e6e6e6;
   padding: 0.8rem;
+}
+
+.card-header {
+  align-items: space-between;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-title {
+  color: #fff;
+  background-color: #ff3576;
 }

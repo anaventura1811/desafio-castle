@@ -1,12 +1,17 @@
 import React from 'react';
 import camiseta from '../../images/camiseta-frente-09.png';
+import { IoMdHeartEmpty } from 'react-icons/io';
 import './styles.scss';
+import Card from '../Card';
 
 function ProductsList({ products }) {
   return (
 		<ul className='products-list'>
 			<li className='list-item'>
-				<span>O2 Store</span>
+				<div className='card-header'>
+					<span className="header-title">O2 STORE</span>
+					<IoMdHeartEmpty size={30} color={'#ff3576'} />
+				</div>
 				<img src={camiseta} alt='camiseta corrida' />
 				<div className='separator' />
 				<strong>Camiseta Manga Curta de Corrida</strong>
@@ -21,17 +26,7 @@ function ProductsList({ products }) {
 				</button>
 			</li>
 			{products.map((product) => (
-				<li key={product.id} className='list-item'>
-					<img src={product.thumbnail} alt={product.title} />
-					<div className='separator' />
-					<strong>{product.title}</strong>
-					<span>{product.price}</span>
-					<button type='button'>
-						<div>
-							<span>COMPRAR</span>
-						</div>
-					</button>
-				</li>
+			  <Card key={product.id} product={ product } />
 			))}
 		</ul>
 	);
