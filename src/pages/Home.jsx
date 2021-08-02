@@ -6,9 +6,9 @@ function Home() {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     const fetchingProducts = async () => {
-      const req = await handleFetchProducts('camiseta');
+      const data = await handleFetchProducts('camiseta');
       // console.log(req);
-      setProducts(req);
+      setProducts(data);
     };
     fetchingProducts();
   }, []);
