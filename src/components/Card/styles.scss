@@ -29,13 +29,6 @@ li span {
   margin: 5px 0 20px;
 }
 
-.product-old-price {
-  color: var(--gray);
-  font-size: 1rem;
-  font-weight: normal;
-  text-decoration: line-through;
-}
-
 .separator {
 	border-bottom: 2px solid #e6e6e6;
   padding: 0.8rem;
@@ -110,4 +103,19 @@ button span {
   display: flex;
   justify-content: flex-start;
   margin-left: 0;
+}
+
+.original-price {
+  align-self: center;
+  color: var(--gray);
+  font-family: Raleway, sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.product-old-price {
+  color: var(--gray);
+  font-size: 1rem;
+  text-decoration: line-through;
+  text-decoration-style: solid;
 }

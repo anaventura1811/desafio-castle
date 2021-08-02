@@ -7,7 +7,7 @@ function Home() {
   useEffect(() => {
     const fetchingProducts = async () => {
       const data = await handleFetchProducts('camiseta');
-      // console.log(req);
+      console.log(data);
       setProducts(data);
     };
     fetchingProducts();

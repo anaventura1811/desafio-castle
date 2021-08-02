@@ -9,7 +9,8 @@ function ProductsList({ products }) {
     id: '01',
     thumbnail: camiseta,
     title: 'Camiseta Manga Curta de Corrida',
-    price: 'R$ 19,90'
+    price: 'R$ 19,90',
+    original_price: 'R$ 49,90'
   };
 
   return (

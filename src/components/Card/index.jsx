@@ -4,6 +4,7 @@ import tagIcon from '../../images/tagIcon.svg';
 import './styles.scss';
 
 function Card({ product }) {
+
   return (
 		<div>
 			<li key={product.id} className='list-item'>
@@ -14,9 +15,12 @@ function Card({ product }) {
 				<img src={product.thumbnail} alt={product.title} />
 				<div className='separator' />
 				<strong>{product.title}</strong>
-				<span>
-					De <span className='product-old-price'>R$49,90</span>
-				</span>{' '}
+          { product.original_price && product.original_price !== product.price ? 
+        (
+          <span className="original-price">
+					  De <span className='product-old-price'>{product.original_price}</span>
+				  </span>
+        ) : ('') }
 				<div className='container'>
 					<img className='tag-icon' src={tagIcon} alt='tag icon' />
 					<span className='product-price'>{product.price}</span>
