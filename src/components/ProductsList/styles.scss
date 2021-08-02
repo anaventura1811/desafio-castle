@@ -2,9 +2,23 @@
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
   justify-content: center;
   list-style: none;
   margin: 0 auto;
   max-width: 1120px;
 }
+
+.products-list {
+  flex: 0 0 calc(33.33% - 1rem);
+}
+
+@supports (gap: 20px) and (display: flex) {
+  .products-list {
+    gap: 20px;
+  }
+}
+
+
+/* Source:
+  https://edrodrigues.com.br/blog/como-detectar-o-suporte-do-navegador-para-flexbox-gap/#:~:text=Recentemente%2C%20muitas%20pessoas%20est%C3%A3o%20entusiasmadas,calhas)%20entre%20colunas%20e%20linhas.
+*/

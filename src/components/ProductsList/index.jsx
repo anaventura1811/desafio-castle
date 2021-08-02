@@ -10,7 +10,11 @@ function ProductsList({ products }) {
     thumbnail: camiseta,
     title: 'Camiseta Manga Curta de Corrida',
     price: 19.90,
-    original_price: 49.90
+    original_price: 49.90,
+    installments: {
+      quantity: 1,
+      amount: 19.90
+    }
   };
 
   return (

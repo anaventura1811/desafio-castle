@@ -1,5 +1,15 @@
-header {
-  align-items: center;
+.title {
+  align-items: space-between;
+  justify-content: space-between;
   display: flex;
   height: 8rem;
+  background: var(--pink);
+}
+
+.title a {
+  color: var(--white);
+  font-family: Montserrat, sans-serif;
+  font-size: 3rem;
+  text-decoration: none;
+  padding: 2rem;
 }

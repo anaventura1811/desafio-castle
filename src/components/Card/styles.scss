@@ -2,8 +2,8 @@
   display: flex;
   width: 336px;
   max-width: 340px;
-  min-height: 690px;
-  max-height: 720px;
+  min-height: 700px;
+  max-height: 760px;
   flex-direction: column;
   background: var(--white);
   border-radius: 4px;
@@ -19,7 +19,9 @@ li img {
 
 li strong {
   align-self: center;
-  font-size: 16px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 800;
   line-height: 20px;
   color: black;
   margin-top: 5px;
@@ -139,4 +141,20 @@ button span {
   align-self: center;
   display: inline-block;
   margin-top: 30px;
+}
+
+.installments {
+  color: var(--green);
+  margin: 0 auto;
+  font-size: 1.3rem;
+}
+
+.installments-container {
+  display: inline-block;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+#installment-connector {
+  color: var(--gray);
 }

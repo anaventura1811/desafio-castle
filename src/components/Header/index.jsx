@@ -4,15 +4,15 @@ import './styles.scss';
 
 function Header() {
   return (
-    <div>
+    <header className="title">
       <Link to="/">
-        <img src="" alt="O2 Store" />
+        O2 STORE
       </Link>
       <div>
         <strong>Meu carrinho</strong>
         <span></span>
       </div>
-    </div>
+    </header>
   )
 }
 
