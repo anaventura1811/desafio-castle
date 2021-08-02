@@ -1,6 +1,7 @@
 import React from 'react';
 import camiseta from '../../images/camiseta-frente-09.png';
 import { IoMdHeartEmpty } from 'react-icons/io';
+import tagIcon from '../../images/tagIcon.svg';
 import './styles.scss';
 import Card from '../Card';
 
@@ -18,7 +19,10 @@ function ProductsList({ products }) {
 				<span>
 					De <span className='product-old-price'>R$49,90</span>
 				</span>{' '}
-				<span className='product-price'>R$19,90</span>
+        <div className="container">
+          <img className="tag-icon" src={ tagIcon } alt="tag icon"/>
+          <span className='product-price'>R$ 19,90</span>
+        </div>
 				<button type='button'>
 					<div>
 						<span>COMPRAR</span>

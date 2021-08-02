@@ -14,7 +14,7 @@
   width: 336px;
   max-width: 340px;
   flex-direction: column;
-  background: #fff;
+  background: var(--white);
   border-radius: 4px;
   padding: 20px;
 }
@@ -41,14 +41,14 @@ li span {
 }
 
 .product-old-price {
-  color: #8b8e90;
+  color: var(--gray);
   font-size: 1rem;
   font-weight: normal;
   text-decoration: line-through;
 }
 
 .separator {
-	border-bottom: 1px solid #e6e6e6;
+	border-bottom: 2px solid #e6e6e6;
   padding: 0.8rem;
   /* width: 250px; */
 }
@@ -60,9 +60,9 @@ li span {
 }
 
 .header-title {
-  background-color: #ff3576;
+  background-color: var(--pink);
   border-radius: 6px;
-  color: #fff;
+  color: var(--white);
   font-family: Montserrat, sans-serif;
   font-weight: 800;
   font-size: 0.8rem;
@@ -72,8 +72,8 @@ li span {
 
 button {
   align-self: center;
-  background: #04d41b;
-  color: #fff;
+  background: var(--green);
+  color: var(--white);
   font-size: 1rem;
   cursor: pointer;
   border: 0;
@@ -101,7 +101,24 @@ button span {
 
 .product-price {
   align-self: center;
-  color: #ff3576;
+  color: var(--pink);
+  font-family: Montserrat, sans-serif;
   font-size: 2rem;
   font-weight: 800;
+}
+
+.tag-icon {
+  align-self: flex-start;
+  left: -30px;
+  position: relative;
+  height: auto;
+  padding: 0;
+  width: 100px;
+
+}
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 0;
 }
