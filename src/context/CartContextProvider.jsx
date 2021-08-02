@@ -25,7 +25,12 @@ function CartContextProvider({ children }) {
       localStorage.setItem('@O2-Store:cart', JSON.stringify(cart));
     }
   }, [cart, cartPreviousValue]);
-  
+
+  const addProductToCart = async (productId) => {
+    try {
+      const updatedCart = [...cart];
+    }
+  }
 
 
   return (

@@ -1,12 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ProductsList from '../components/ProductsList';
+import { handleFetchProducts } from '../services/fetch';
 
 function Home() {
   const [products, setProducts] = useState([]);
-  
+  useEffect(() => {
+    const fetchingProducts = async () => {
+      const req = await handleFetchProducts('blusa');
+      // console.log(req);
+      setProducts(req);
+    };
+    fetchingProducts();
+  }, []);
+
   return (
     <div>
-      <ProductsList />
+      <ProductsList products={ products } />
     </div>
   )
 }
