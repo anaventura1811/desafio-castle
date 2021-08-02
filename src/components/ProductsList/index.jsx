@@ -2,7 +2,7 @@ import React from 'react';
 
 function ProductsList({ products }) {
   return (
-    <ul>
+    <ul className="products-list">
       { products.map((product) => (
         <li key={ product.id}>
           <img src={product.image} alt={ product.title }/>
