@@ -53,3 +53,19 @@ li span {
   color: #fff;
   background-color: #ff3576;
 }
+
+button {
+  background: #04d41b;
+  color: #fff;
+  cursor: pointer;
+  border: 0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: auto;
+  transition: filter, 0.2s;
+
+  &:hover {
+    background: fitler(brightness, 0.9);
+  }
+
+}
