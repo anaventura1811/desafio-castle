@@ -1,11 +1,11 @@
 import React from 'react';
 import camiseta from '../../images/camiseta-frente-09.png';
-// import './styles';
+import './styles.scss';
 
 function ProductsList({ products }) {
   return (
 		<ul className='products-list'>
-			<li>
+			<li className="list-item">
 				<img src={camiseta} alt='camiseta corrida' />
 				<strong>Camiseta corrida</strong>
 				<span>

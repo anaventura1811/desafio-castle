@@ -6,7 +6,7 @@ function Home() {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     const fetchingProducts = async () => {
-      const req = await handleFetchProducts('blusa');
+      const req = await handleFetchProducts('camiseta');
       // console.log(req);
       setProducts(req);
     };
