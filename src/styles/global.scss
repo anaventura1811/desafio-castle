@@ -11,13 +11,14 @@
 :root {
   --white: #fff;
   --pink: #ff3576;
+  --light-grey: #e6e6e6;
   --gray: #8b8e90;
   --green: #04d41b;
-  --corDeFundo: #fbfbfb;
+  --bgColor: #fbfbfb;
 }
 
 body {
-  background: #fbfbfb;
+  background: var(--bgColor);
   font-family: Raleway, sans-serif;
   -webkit-font-smoothing: antialiased;
 }

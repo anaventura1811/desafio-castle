@@ -25,15 +25,16 @@ function Card({ product }) {
 				<img src={product.thumbnail} alt={product.title} />
 				<div className='separator' />
 				<strong>{product.title}</strong>
-				{product.original_price && product.original_price !== product.price ? (
-					<span className='original-price'>
-						De <span className='product-old-price'>{originalPriceFormatted}</span>
-					</span>
-				) : (
-					''
-				)}
+        <div className="origin-price">
+          {product.original_price && product.original_price !== product.price ? (
+            <span className='original-price'>
+              De <span className='product-old-price'>{originalPriceFormatted}</span>
+            </span>
+          ) : (
+            ''
+          )}
+        </div>
 				<div className='container'>
-          {/* <span className="prime-icon-text">Prime</span> */}
 					<img className='tag-icon' src={tagIcon} alt='tag icon' />
 					<span className='product-price'>{formattedPrice}</span>
 				</div>
