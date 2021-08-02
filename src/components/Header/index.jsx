@@ -8,10 +8,10 @@ function Header() {
       <Link to="/">
         O2 STORE
       </Link>
-      <div>
+      <Link to="/cart">
         <strong>Meu carrinho</strong>
         <span></span>
-      </div>
+      </Link>
     </header>
   )
 }
