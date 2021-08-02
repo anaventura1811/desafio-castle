@@ -41,6 +41,9 @@ function Card({ product }) {
 						<span>COMPRAR</span>
 					</div>
 				</button>
+				<span className='original-price not-prime'>
+					Não sócio: <span className="not-prime-price">{product.original_price ? originalPriceFormatted : formattedPrice}</span>
+				</span>
 			</li>
 		</div>
 	);
