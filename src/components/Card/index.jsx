@@ -1,19 +1,14 @@
 import React from 'react';
 import { IoMdHeartEmpty } from 'react-icons/io';
 import tagIcon from '../../images/tag.svg';
+import { format } from '../../services/formattingService';
 import './styles.scss';
 
 function Card({ product }) {
   const { price, original_price } = product;
-  const formattedPrice = new Intl.NumberFormat('pt-BR', {
-		style: 'currency',
-		currency: 'BRL',
-	}).format(price);
-
-  const originalPriceFormatted = new Intl.NumberFormat('pt-BR', {
-    style: 'currency',
-    currency: 'BRL',
-  }).format(original_price);
+  
+  const formattedPrice = format(price);
+  const originalPriceFormatted = format(original_price);
 
   return (
 		<div>
