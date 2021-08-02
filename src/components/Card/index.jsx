@@ -1,6 +1,6 @@
 import React from 'react';
 import { IoMdHeartEmpty } from 'react-icons/io';
-import tagIcon from '../../images/tagIcon.svg';
+import tagIcon from '../../images/tag.svg';
 import './styles.scss';
 
 function Card({ product }) {
@@ -33,6 +33,7 @@ function Card({ product }) {
 					''
 				)}
 				<div className='container'>
+          {/* <span className="prime-icon-text">Prime</span> */}
 					<img className='tag-icon' src={tagIcon} alt='tag icon' />
 					<span className='product-price'>{formattedPrice}</span>
 				</div>
