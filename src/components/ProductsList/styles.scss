@@ -1,12 +1,18 @@
 .products-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
   list-style: none;
+  margin: 0 auto;
+  max-width: 1120px;
 }
 
 .list-item {
   display: flex;
+  width: 336px;
+  max-width: 340px;
   flex-direction: column;
   background: #fff;
   border-radius: 4px;
@@ -16,13 +22,16 @@
 li img {
   align-self: center;
   max-width: 250px;
+  max-height: 350px;
 };
 
 li strong {
+  align-self: center;
   font-size: 16px;
   line-height: 20px;
   color: black;
   margin-top: 5px;
+  padding-top: 1rem;
 }
 
 li span {
@@ -41,6 +50,7 @@ li span {
 .separator {
 	border-bottom: 1px solid #e6e6e6;
   padding: 0.8rem;
+  /* width: 250px; */
 }
 
 .card-header {
@@ -50,22 +60,48 @@ li span {
 }
 
 .header-title {
-  color: #fff;
   background-color: #ff3576;
+  border-radius: 6px;
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-weight: 800;
+  font-size: 0.8rem;
+  margin-top: auto;
+  padding: 5px 20px;
 }
 
 button {
+  align-self: center;
   background: #04d41b;
   color: #fff;
+  font-size: 1rem;
   cursor: pointer;
   border: 0;
   border-radius: 4px;
   overflow: hidden;
+  padding: 0 36px;
   margin-top: auto;
+  max-width: 180px;
   transition: filter, 0.2s;
+}
 
-  &:hover {
-    background: fitler(brightness, 0.9);
-  }
+button:hover {
+  background: filter(brightness, 0.9);
+}
 
+button div {
+  padding: 16px;
+}
+
+button span {
+  font-family: Raleway, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.product-price {
+  align-self: center;
+  color: #ff3576;
+  font-size: 2rem;
+  font-weight: 800;
 }

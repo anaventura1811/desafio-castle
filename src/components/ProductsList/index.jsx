@@ -9,7 +9,7 @@ function ProductsList({ products }) {
 		<ul className='products-list'>
 			<li className='list-item'>
 				<div className='card-header'>
-					<span className="header-title">O2 STORE</span>
+					<span className='header-title'>O2 STORE</span>
 					<IoMdHeartEmpty size={30} color={'#ff3576'} />
 				</div>
 				<img src={camiseta} alt='camiseta corrida' />
@@ -18,7 +18,7 @@ function ProductsList({ products }) {
 				<span>
 					De <span className='product-old-price'>R$49,90</span>
 				</span>{' '}
-				<span>R$19,90</span>
+				<span className='product-price'>R$19,90</span>
 				<button type='button'>
 					<div>
 						<span>COMPRAR</span>
@@ -26,7 +26,7 @@ function ProductsList({ products }) {
 				</button>
 			</li>
 			{products.map((product) => (
-			  <Card key={product.id} product={ product } />
+				<Card key={product.id} product={product} />
 			))}
 		</ul>
 	);

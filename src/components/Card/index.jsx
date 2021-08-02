@@ -12,11 +12,13 @@ function Card({ product }) {
 				<img src={product.thumbnail} alt={product.title} />
 				<div className='separator' />
 				<strong>{product.title}</strong>
-				<span>{product.price}</span>
+				<span className="product-price">{product.price}</span>
 				<button type='button'>
-					<div>
-						<span>COMPRAR</span>
-					</div>
+          <div>
+            <span>
+					    COMPRAR
+            </span>
+          </div>
 				</button>
 			</li>
 		</div>
