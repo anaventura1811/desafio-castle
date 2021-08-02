@@ -3,7 +3,7 @@
   width: 336px;
   max-width: 340px;
   min-height: 700px;
-  max-height: 760px;
+  height: 760px;
   flex-direction: column;
   background: var(--white);
   border-radius: 4px;
@@ -13,8 +13,9 @@
 li img {
   align-self: center;
   height: auto;
-  max-height: 300px;
+  height: 300px;
   max-width: 250px;
+  width: auto;
 }
 
 li strong {

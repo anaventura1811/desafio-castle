@@ -6,7 +6,7 @@ import './styles.scss';
 
 function Card({ product }) {
   const { price, original_price } = product;
-  
+
   const formattedPrice = format(price);
   const originalPriceFormatted = format(original_price);
 
@@ -38,13 +38,7 @@ function Card({ product }) {
                 <span className='installments'>{product.installments.quantity}x</span>{' '}
                 <span id="installment-connector">de</span>
                 {' '}
-              <span>{
-                new Intl.NumberFormat('pt-BR', {
-                  style: 'currency',
-                  currency: 'BRL',
-                }).format(product.installments.amount)
-                }
-              </span>
+              <span>{ format(product.installments.amount)}</span>
             </div>
             ) : ('')}
 				<button type='button'>
