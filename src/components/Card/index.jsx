@@ -26,7 +26,7 @@ function Card({ product }) {
 							De <span className='product-old-price'>{originalPriceFormatted}</span>
 						</span>
 					) : (
-						''
+						<div />
 					)}
 				</div>
 				<div className='container'>
