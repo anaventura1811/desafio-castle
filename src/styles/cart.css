@@ -11,8 +11,8 @@
 .cart-footer {
   align-items: center;
   display: flex;
-  justify-content: space-between;
-  margin-top: 40px;
+  justify-content: space-evenly;
+  margin-top: 4rem;
   max-width: 1000px;
 }
 
