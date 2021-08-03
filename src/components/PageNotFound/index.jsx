@@ -23,8 +23,8 @@ function PageNotFound() {
         <div className="not-found-container">
           <p className='not-found-title'>Oh no!!</p>
           <p className='subtitle'>
-            Você deve ter digitado a URL incorreta <br />
-            ou está tentando acessar uma página que não existe mais.
+            Você deve ter digitado a URL incorreta ou
+            está tentando acessar uma página que não existe mais.
           </p>
 
         </div>
