@@ -38,7 +38,6 @@ li span {
 .separator {
 	border-bottom: 2px solid var(--light-grey);
   padding: 0.65rem;
-  /* width: 250px; */
 }
 
 .card-header {
@@ -126,7 +125,6 @@ button span {
   color: var(--gray);
   font-size: 1rem;
   text-decoration: line-through;
-  /* text-decoration-style: solid; */
 }
 
 .not-prime {
