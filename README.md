@@ -12,6 +12,12 @@
 #### `npm install`
 #### `npm start`
 
+4. Certifique-se de que está na branch correta (`online-store-template`):
+ #### `git branch`
+ 
+5. Se não estiver, vá para a branch `online-store-template`:
+#### `git checkout online-store-template`
+
 O aplicativo vai rodar em modo desenvolvimento.
 Abra então [http://localhost:3000](http://localhost:3000) para visualizá-lo no browser.
 
