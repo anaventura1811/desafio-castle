@@ -17,7 +17,7 @@ Abra então [http://localhost:3000](http://localhost:3000) para visualizá-lo no
 
 ## Neste projeto, foram utilizados:
 1. React JS
-2. React Hooks (useState, useContext, useEffect)
+2. React Hooks (useState, useContext, useEffect, useRef)
 3. Hooks customizados
 4. Context API do React para gerenciamento de estado
 5. Biblioteca React-Icons para ícones 
