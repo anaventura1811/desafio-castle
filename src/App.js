@@ -4,6 +4,7 @@ import Cart from './pages/Cart';
 import Home from './pages/Home';
 import { ToastContainer, toast } from 'react-toastify';
 import Favorites from './pages/Favorites';
+import PageNotFound from './components/PageNotFound';
 
 toast.configure();
 
@@ -24,6 +25,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route path="/cart" component={ Cart } />
         <Route path="/favorites" component={ Favorites }/>
+        <Route path="/*" component={ PageNotFound } />
       </Switch>
     </>
   );

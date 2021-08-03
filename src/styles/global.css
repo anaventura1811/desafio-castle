@@ -15,6 +15,10 @@
   --gray: #8b8e90;
   --green: #04d41b;
   --bgColor: #fbfbfb;
+  --light-gray: #999;
+  --light-gray-100: #ddd;
+  --medium-gray: #666;
+  --light-gray-50: #eee;
 }
 
 body {

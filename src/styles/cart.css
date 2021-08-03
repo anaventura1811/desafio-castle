@@ -21,7 +21,7 @@
   background-color: inherit;
   border: 0;
   padding: 8px;
-  color: #fff;
+  color: var(--white);
   cursor: pointer;
   transition: filter 0.2s;
   width: 3.5rem;
@@ -45,14 +45,14 @@ table {
 }
 
 thead th {
-  color: #999;
+  color: var(--light-gray);
   text-align: left;
   padding: 12px;
 }
 
 tbody td {
   padding: 12px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--light-gray-50);
 }
 
 table img {
@@ -71,9 +71,9 @@ table span {
 }
 
 .btns-container input {
-  border: 1px solid #ddd;
+  border: 1px solid var(--light-gray-100);
   border-radius: 4px;
-  color: #666;
+  color: var(--medium-gray);
   padding: 6px;
   width: 3.5rem;
 }
@@ -104,7 +104,7 @@ table span {
 }
 
 .total-container span {
-  color: #999;
+  color: var(--light-gray);
 }
 
 .total-container strong {
