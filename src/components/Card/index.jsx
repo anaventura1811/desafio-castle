@@ -28,7 +28,7 @@ function Card({ product }) {
 		installments:
 			{
 				quantity: product.installments.quantity || 0,
-				amount: product.installments.quantity || 0,
+				amount: product.installments.amount || 0,
 			} || '',
 	};
 
