@@ -32,7 +32,9 @@ function Favorites() {
     return (
 			<>
         <Header />
-				<p className='empty-fav-list-message'>Você ainda não possui produtos favoritos</p>;
+        <div className="msg-container">
+				  <h1 className='empty-fav-list-message'>Você ainda não possui produtos favoritos</h1>
+        </div>
 			</>
 		);
   }

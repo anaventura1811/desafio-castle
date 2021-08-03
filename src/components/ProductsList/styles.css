@@ -12,6 +12,20 @@
   flex: 0 0 calc(33.33% - 1rem);
 }
 
+.msg-container {
+  align-content: center;
+  max-width: 400px;
+  display: flex;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.empty-fav-list-message {
+  align-self: center;
+  justify-self: center;
+  display: flex;
+}
+
 @supports (gap: 20px) and (display: flex) {
   .products-list {
     gap: 20px;

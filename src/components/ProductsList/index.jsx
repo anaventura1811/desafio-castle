@@ -9,7 +9,7 @@ function ProductsList({ products }) {
   const productTest = {
     id: 'MLB11111-1',
     thumbnail: camiseta,
-    title: 'Camiseta Manga Curta de Corrida',
+    title: 'Camiseta Manga Curta Corrida',
     price: 19.90,
     original_price: 49.90,
     installments: {
