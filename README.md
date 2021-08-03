@@ -8,8 +8,16 @@
 2. Entre na pasta do repositório que você acabou de clonar:
 #### `cd desafio-castle`
 
-3. Instale as dependências e inicialize o projeto:
+3. Instale as dependências:
 #### `npm install`
+
+4. Certifique-se de que está na branch correta (`online-store-template`):
+ #### `git branch`
+ 
+5. Se não estiver, vá para a branch `online-store-template`:
+#### `git checkout online-store-template`
+
+6. Inicialize o projeto:
 #### `npm start`
 
 O aplicativo vai rodar em modo desenvolvimento.
@@ -17,7 +25,7 @@ Abra então [http://localhost:3000](http://localhost:3000) para visualizá-lo no
 
 ## Neste projeto, foram utilizados:
 1. React JS
-2. React Hooks (useState, useContext, useEffect)
+2. React Hooks (useState, useContext, useEffect, useRef)
 3. Hooks customizados
 4. Context API do React para gerenciamento de estado
 5. Biblioteca React-Icons para ícones 
