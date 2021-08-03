@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react';
 import '../components/ProductsList/styles.css';
 import Header from '../components/Header';
 import FavCard from '../components/FavCard';
+import Loading from '../components/Loading';
 
 function Favorites() {
   const [favoriteProducts, setFavoriteProducts] = useState([]);
+  const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
     let cancel = false;
@@ -12,6 +14,7 @@ function Favorites() {
     const favoritesFromStorage = JSON.parse(localStorage.getItem('favoriteProducts'));
     if (favoritesFromStorage) {
       setFavoriteProducts(favoritesFromStorage);
+      setLoading(false);
     }
     return () => {
       cancel = true;
@@ -26,6 +29,10 @@ function Favorites() {
 		localStorage.setItem('favoriteProducts', JSON.stringify(updatedFavoriteProducts));
 		setFavoriteProducts(updatedFavoriteProducts);
 	}
+
+  if (isLoading) {
+    return <Loading />
+  }
 
   if (favoriteProducts.length === 0) {
 

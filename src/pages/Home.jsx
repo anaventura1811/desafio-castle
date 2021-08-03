@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import Loading from '../components/Loading';
 import ProductsList from '../components/ProductsList';
 import { handleFetchProducts } from '../services/fetch';
 
@@ -20,10 +21,10 @@ function Home() {
 
   if (isLoading) {
     return (
-      'Loading...'
+      <Loading />
     );
   }
-  
+
   return (
     <div>
       <Header />
