@@ -119,4 +119,6 @@ function CartContextProvider({ children }) {
 export default CartContextProvider;
 
 // Source:
-// Lógica ligeiramente adaptada de três projetos anteriores:
+// Lógica ligeiramente adaptada dos seguintes projetos anteriores:
+// Repositório Projeto LetmeEat: https://github.com/anaventura1811/letmeeat
+// Repositório feito para concluir Desafio da Especialização Ignite Trilha - ReactJS: https://github.com/anaventura1811/rocketseat-shopping-cart-challenge
