@@ -158,4 +158,5 @@ button span {
 
 #installment-connector {
   color: var(--gray);
+  font-weight: normal;
 }
