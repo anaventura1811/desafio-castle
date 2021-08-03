@@ -6,16 +6,24 @@ import { handleFetchProducts } from '../services/fetch';
 
 function Home() {
   const [products, setProducts] = useState([]);
+  const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchingProducts = async () => {
       const data = await handleFetchProducts('camiseta');
       console.log(data);
       setProducts(data);
+      setLoading(false);
     };
     fetchingProducts();
   }, []);
 
+  if (isLoading) {
+    return (
+      'Loading...'
+    );
+  }
+  
   return (
     <div>
       <Header />
