@@ -2,7 +2,7 @@ import React from 'react';
 import { IoMdHeartEmpty } from 'react-icons/io';
 import tagIcon from '../../images/tag.svg';
 import { format } from '../../services/formattingService';
-import './styles.scss';
+import './styles.css';
 import { useCart } from '../../hooks/useCart';
 
 function Card({ product }) {

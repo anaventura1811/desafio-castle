@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles.scss';
+import './styles.css';
 import wavesDecoration from '../../images/waves.svg';
 
 function Footer() {

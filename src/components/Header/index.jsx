@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 // import { useHistory } from 'react-router';
 import { MdShoppingBasket } from 'react-icons/md';
-import './styles.scss';
+import './styles.css';
 import { useCart } from '../../hooks/useCart';
 
 function Header() {

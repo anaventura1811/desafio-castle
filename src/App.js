@@ -8,11 +8,22 @@ toast.configure();
 
 function App() {
   return (
-    <Switch>
-      <Route exact path="/" component={Home} />
-      <Route path="/cart" component={ Cart } />
-      <ToastContainer autoclose={3000} />
-    </Switch>
+    <>
+    	<ToastContainer
+				position='top-center'
+				autoClose={3000}
+				hideProgressBar={false}
+				newestOnTop={false}
+				closeOnClick
+				pauseOnFocusLoss
+				draggable
+				pauseOnHover
+			/>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/cart" component={ Cart } />
+      </Switch>
+    </>
   );
 }
 

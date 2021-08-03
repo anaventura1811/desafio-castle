@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import './styles/global.scss';
+import './styles/global.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import CartContextProvider from './context/CartContextProvider';
+import 'react-toastify/dist/ReactToastify.css';
 
 ReactDOM.render(
   <React.StrictMode>

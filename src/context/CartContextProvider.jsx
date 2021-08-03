@@ -63,26 +63,27 @@ function CartContextProvider({ children }) {
   const removeProductFromCart = async (productId) => {
     try {
       const updatedCart = [...cart];
-      const productIndex = updatedCart.findIndex((product) => product.id === productId);
+      const productIndex = updatedCart.find((product) => product.id === productId);
       if (productIndex) {
-        updatedCart.filter((product) => product.id !== productId);
-        setCart(updatedCart);
+       const newCart = updatedCart.filter((product) => product.id !== productId);
+        setCart(newCart);
       } else {
         throw Error();
       }
     } catch {
-
+      toast.error('Erro na remoção do produto');
     }
   };
 
-  const updateProductAmount = async ({ productId, productEl, amount }) => {
+  const updateProductAmount = async ( productId, productEl, quantity ) => {
     try {
-      if (amount <= 0) {
+      if (quantity <= 0) {
         return;
       }
 
       const stock = productEl.available_quantity;
-      if (amount > stock) {
+
+      if (quantity > stock) {
         toast.error('Quantidade solicitada fora de estoque');
         return;
       }
@@ -91,7 +92,7 @@ function CartContextProvider({ children }) {
       const productExists = updatedCart.find((product) => product.id === productId);
 
       if (productExists) {
-        productExists.amount = amount;
+        productExists.amount = quantity;
         setCart(updatedCart);
       } else {
         throw Error();
@@ -116,3 +117,6 @@ function CartContextProvider({ children }) {
 }
 
 export default CartContextProvider;
+
+// Source:
+// Lógica ligeiramente adaptada de três projetos anteriores:
