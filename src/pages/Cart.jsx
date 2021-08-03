@@ -12,9 +12,9 @@ function Cart() {
     subTotal: format(product.price * product.amount)
   }));
 
-  const total = cart.reduce((sumTotal, product) => {
-    return format(sumTotal + product.price * product.amount)
-  }, 0);
+  const total = format(cart.reduce((sumTotal, product) => {
+    return Number(sumTotal + product.price * product.amount);
+  }, 0));
 
   function handleAddOrRemoveProduct(product, event) {
     const type = event.target.getAttribute('data-type');
@@ -28,11 +28,6 @@ function Cart() {
       const amount = product.amount - 1;
       updateProductAmount(product.id, product, amount);
     };
-  }
-
-  function handleAddProduct(product) {
-    const amount = product.amount + 1;
-    updateProductAmount(product.id, product, amount)
   }
 
   function handleRemoveProduct(productId) {
@@ -75,7 +70,7 @@ function Cart() {
 									<button
 										type='button'
 										data-type='increase'
-										onClick={(ev) => handleAddProduct(product)}
+										onClick={(ev) => handleAddOrRemoveProduct(product, ev)}
 									>
 										<MdAddCircleOutline size={20} />
 									</button>
